@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Trivia Game</title>
+    <title>Stranger Things Trivia</title>
 
     <!-- Linking Reset CSS -->
     <link rel = "stylesheet"  href = "assets/css/reset.css">
@@ -12,58 +12,31 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <!-- Linking Custom CSS -->
     <link rel = "stylesheet" href = "assets/css/style.css">
-
-
-
+    <!-- JQuery -->
+    <script src="http://code.jquery.com/jquery-3.3.1.js"></script>
 </head>
-
-
 <body>
-    <header>
-        <h1>Stranger Things</h1>
-        <h2>Trivia Game!</h2>
-    </header>
-
-    <form id ="Quiz" name ="quiz">
+    
+    <div class="container">
+        <div id="Instructions">
+            <h1>How to play</h1>
+            <p>Answer the questions correctly.</p>
+            <a class="btn btn-primary" id="start" href="#">Ready to start?</a>
+        </div>
         
-        <!-- First Question -->
-        <p>Question 01</p>
-        <input type = "radio" id = "mc" name = "question1" value = "Answer-01"> answer-01<br>
-        <input type = "radio" id = "mc" name = "question1" value = "Answer-02"> answer-02<br>
-
-
-        <!-- Second Question -->
-        <p>Question 02</p>
-        <input type = "radio" id = "mc" name = "question2" value = "Question2-Answer01"> Question02-Anser-01<br>
-        <input type = "radio" id = "mc" name = "question2" value = "Question2-Answer02"> Question02-Answer-02<br>
-
-        <!-- Third Question -->
-        <p>Question 03</p>
-        <input type = "radio" id = "mc" name = "question3" value = "Question3-Answer01"> Question03-Anser-01<br>
-        <input type = "radio" id = "mc" name = "question3" value = "Question3-Answer02"> Question03-Answer-02<br>
-
-        <input id = "button" type = "button" value = "Done" onclick = "check();">
-
-    </form>
-
-    <div id ="afterSubmit">
-
-    <p id ="messeges"></p>
-    <p id ="numberCorrect"> You are done! Great Job!</p>
-    <img id="animated">
-
+        <div class="center-block" id="quiz-container">
+                <div id="display">00:00</div>
+            <h1 id="question"></h1>
+            <form id="answers"></form>
+            <a class="btn btn-primary" id="next" href="#">Done</a>
+        </div>
+        
+        <div id="score-container">
+            <a class="btn btn-primary" id="restart" href="#">Restart quiz?</a>
+        </div>
     </div>
 
 
-
-    <!-- JAVASCRIPT -->
-
-    <!-- Game js -->
-    <script src="assets/javascript/app.js"></script>
-    <!-- Bootstrap javascript -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-
+      <script src="assets/javascript/another.js"></script>
 </body>
 </html>
