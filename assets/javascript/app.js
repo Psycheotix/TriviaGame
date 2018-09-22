@@ -40,7 +40,6 @@ var position = 0;
         document.getElementById("Instructions").style.display = 'none';
         document.getElementById("score-container").style.display = 'none';
         showQuestion();
-        
         $("#quiz-container").fadeIn("slow");
     });
     
