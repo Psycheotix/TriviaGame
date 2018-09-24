@@ -1,5 +1,115 @@
 
+@import url('https://fonts.googleapis.com/css?family=Arvo:400,700|Raleway');
+/* font-family: 'Arvo', serif;   -   font-family: 'Raleway', sans-serif; */
+
+
+/* FOR STRANGER THINGS FONT USING SOURCES__________________________________________________
+https://codepen.io/sethjenks/pen/KpNJZp - How to make a gradient stroke on text
+
+
+
+
+*/
+
+body{
+
+background-color:#000;
+color:#E20100;
+font-family: 'Raleway', sans-serif;
+font-size: 100%;
+
+
+}
+
+
+.answers{
+padding:5px;
+}
+
+radio{
+padding-right: 10px;
+margin-right: 20px;
+}
 
 #afterSubmit {
-    visibility: hidden;
+visibility: hidden;
 }
+
+
+
+/* STRANGER THINGS LOGO - 
+gradient from https://codepen.io/sethjenks/pen/KpNJZp */
+h1 {
+font-family: 'Arvo', serif;
+font-size: 4em;
+font-weight: 700;
+text-transform: uppercase;
+text-align: center;
+/* Warning: no fallback */
+
+background: -webkit-linear-gradient(-130deg, #ed2b12 5%, #630100 53%, #450100 91%) ;
+-webkit-background-clip: text;
+-webkit-text-stroke: 4px transparent;
+color: #111;
+letter-spacing: 4px;
+
+}
+
+hr { 
+display: block;
+margin-top: 0.5em;
+margin-bottom: 0.5em;
+margin-left: auto;
+margin-right: auto;
+border-style: inset;
+border-width: 1px;
+border-color: #4a0005;
+}
+
+.row {
+text-align: center;
+vertical-align: middle;
+line-height: 90px;
+
+
+}
+/* Bootstrap */
+
+.btn-primary {
+color: #fff;
+background-color: #4a0005;
+border-color: #270203;
+}
+
+.btn-primary:hover {
+color: #4a0005;
+background-color: #fff;
+border-color: #222;
+}
+
+.btn-primary:active {
+color: #4a0005;
+background-color: #fff;
+border-color: #222;
+}
+
+.btn-primary:visited .btn-primary:focus{
+color: #fff;
+background-color: #4a0005;
+border-color: #270203;
+}
+
+
+
+.container{
+width:90%;
+padding-top: 30px;
+margin:0px auto;
+padding-left: 40px;
+}
+
+
+
+
+
+

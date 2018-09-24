@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"> 
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,36 +8,45 @@
     <title>Stranger Things Trivia</title>
 
     <!-- Linking Reset CSS -->
-    <link rel = "stylesheet"  href = "assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
     <!-- Linking Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
     <!-- Linking Custom CSS -->
-    <link rel = "stylesheet" href = "assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <!-- JQuery -->
     <script src="http://code.jquery.com/jquery-3.3.1.js"></script>
 </head>
+
 <body>
-    
+
     <div class="container">
+        <div class="row">
+               <h1>Stranger <br>
+                Things</h1>
+                
+            </div>
+            <hr>
         <div id="Instructions">
-            <h1>How to play</h1>
+            <h2>How to play</h2>
             <p>Answer the questions correctly.</p>
             <a class="btn btn-primary" id="start" href="#">Ready to start?</a>
         </div>
-        
+
         <div class="center-block" id="quiz-container">
-                <div id="display">00:00</div>
-            <h1 id="question"></h1>
+            <!-- <div id="display">00:00</div> -->
+            <h2 id="question"></h2>
             <form id="answers"></form>
             <a class="btn btn-primary" id="next" href="#">Done</a>
         </div>
-        
+
         <div id="score-container">
             <a class="btn btn-primary" id="restart" href="#">Restart quiz?</a>
         </div>
     </div>
 
-
-      <script src="assets/javascript/app.js"></script>
+    <!-- Linking questions javascript -->
+    <script src="assets/javascript/app.js"></script>
 </body>
+
 </html>
