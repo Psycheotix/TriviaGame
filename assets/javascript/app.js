@@ -23,6 +23,8 @@ $(document).ready(function() {
 var correct = 0;   //variable is a counter for how many users get's correct
 var selected = []; //variable where user answers will be pushed
 var position = 0;
+var timer = 10;
+var timeInterval;
 
 
 ///VARIABLES FOR TIME
@@ -37,22 +39,32 @@ var position = 0;
         position=0;
         correct=0;
         selected=[];
+        timer = 10;
+        clearInterval(timeInterval);
+        $('#score-container').empty();
+        $('#timer').text(timer);
         document.getElementById("Instructions").style.display = 'none'; //Hiding Instructions
         document.getElementById("score-container").style.display = 'none'; //Hiding score-container
         showQuestion(); //call function
+        startTimer();
         $("#quiz-container").fadeIn("slow"); //Fade in container with questions
     });
     
     // When the user clicks the Done button, check the answer and show the next question
     $("#next").click(function(){
+        clearInterval(timeInterval);
         if ($("#answers input").is(":checked")) {
             checkAnswer();
             position++;
             showQuestion();//Go to and show next question function
+            timer = 10;
+            $('#timer').text(timer);
+            startTimer();
             
         }
         else{
             alert("Please select and answer."); //alert if no answer was picked
+            startTimer()
         }
         console.log(correct, selected);
     });
@@ -83,7 +95,21 @@ var position = 0;
         if(selected[position] === correctAnswer){ // 
             correct++; //add to correct counter +1
         }
-    }  
+    } 
+    function startTimer(){
+        timeInterval = setInterval(function(){
+            if( timer == 0 ) {
+                checkAnswer();
+                position++;
+                showQuestion();
+                timer = 10;
+            } else {
+                timer--;
+            }
+           $("#timer").text(timer);
+
+        },1000)
+    }
     
 });
     
