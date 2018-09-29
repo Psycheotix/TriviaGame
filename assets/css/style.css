@@ -6,27 +6,20 @@
 /* FOR STRANGER THINGS FONT USING SOURCES__________________________________________________
 https://codepen.io/sethjenks/pen/KpNJZp - How to make a gradient stroke on text
 
-
-
-
 */
 
-body{
-
+body {
 background-color:#000;
 color:#E20100;
 font-family: 'Raleway', sans-serif;
 font-size: 100%;
-
-
 }
 
-
-.answers{
+.answers {
 padding:5px;
 }
 
-radio{
+button, input, optgroup, select, textarea {
 padding-right: 10px;
 margin-right: 20px;
 }
@@ -34,8 +27,6 @@ margin-right: 20px;
 #afterSubmit {
 visibility: hidden;
 }
-
-
 
 /* STRANGER THINGS LOGO - 
 gradient from https://codepen.io/sethjenks/pen/KpNJZp */
@@ -52,7 +43,6 @@ background: -webkit-linear-gradient(-130deg, #ed2b12 5%, #630100 53%, #450100 91
 -webkit-text-stroke: 4px transparent;
 color: #111;
 letter-spacing: 4px;
-
 }
 
 hr { 
@@ -70,46 +60,52 @@ border-color: #4a0005;
 text-align: center;
 vertical-align: middle;
 line-height: 90px;
-
-
 }
+
 /* Bootstrap */
 
-.btn-primary {
-color: #fff;
-background-color: #4a0005;
-border-color: #270203;
-}
-
-.btn-primary:hover {
-color: #4a0005;
-background-color: #fff;
-border-color: #222;
-}
-
-.btn-primary:active {
-color: #4a0005;
-background-color: #fff;
-border-color: #222;
-}
-
-.btn-primary:visited .btn-primary:focus{
-color: #fff;
-background-color: #4a0005;
-border-color: #270203;
-}
-
-
-
-.container{
+.container {
 width:90%;
 padding-top: 30px;
 margin:0px auto;
 padding-left: 40px;
 }
 
+/* BUTTON */
 
+.btn-primary {
+    color: #fff;
+    background-color: #4a0005;
+    border-color: #270203;
+    margin: 0px 15px 10px;
+    outline: 0 none;
+}
 
+.btn-primary:hover {
+    color: #4a0005;
+    background-color: #fff;
+    border-color: #222;
+    outline: 0 none;
+}
 
+.btn-primary:focus {
+    color: #4a0020;
+    background-color: #fff;
+    border-color: #222;
+    outline: 0 none;
+}
+
+.btn-primary:active {
+    color: #4a0005;
+    background-color: #fff;
+    border-color: #222;
+    outline: 0 none;
+}
+.btn-primary:not(:disabled):not(.disabled):active {
+    color: #fff;
+    background-color: #4a0005;
+    border-color: #270203;
+    outline: 0 none;
+}
 
 

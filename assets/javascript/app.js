@@ -23,7 +23,7 @@ $(document).ready(function() {
 var correct = 0;   //variable is a counter for how many users get's correct
 var selected = []; //variable where user answers will be pushed
 var position = 0;
-var timer = 10;
+var timer = 20;
 var timeInterval;
 
 
@@ -39,10 +39,10 @@ var timeInterval;
         position=0;
         correct=0;
         selected=[];
-        timer = 10;
+        timer = 20;
         clearInterval(timeInterval);
-        $('#score-container').empty();
-        $('#timer').text(timer);
+        // $('#score-container').empty();
+        $('#timer').text("0:" + timer);
         document.getElementById("Instructions").style.display = 'none'; //Hiding Instructions
         document.getElementById("score-container").style.display = 'none'; //Hiding score-container
         showQuestion(); //call function
@@ -57,8 +57,8 @@ var timeInterval;
             checkAnswer();
             position++;
             showQuestion();//Go to and show next question function
-            timer = 10;
-            $('#timer').text(timer);
+            timer = 20;
+            $('#timer').text("0:" + timer);
             startTimer();
             
         }
@@ -83,30 +83,32 @@ var timeInterval;
         }
         else {
             document.getElementById("quiz-container").style.display = 'none'; //Hide quiz-container
-            $("#score-container").append("<h2>You got " + correct + " questions correct!</h2>").fadeIn("slow");  //Fade in the score with the user's correct answers count
+            $("#score-container").append("<h2>You got" + "" + correct + "" + "questions correct!</h2>").fadeIn("slow");  //Fade in the score with the user's correct answers count
         }
-    } 
+    }
     
     // Function that checks to see if the answer is correct
     function checkAnswer(){
         selected.push($("#answers input:checked").val()); //push to the array, check value
         console.log(allQuestions[position].choices)//Console log 
-        var correctAnswer = allQuestions[position].choices[allQuestions[position].correctAnswer]; // 
-        if(selected[position] === correctAnswer){ // 
+        var correctAnswer = allQuestions[position].choices[allQuestions[position].correctAnswer];
+        if(selected[position] === correctAnswer){
             correct++; //add to correct counter +1
         }
-    } 
+    }
+
+    ///Start Timer
     function startTimer(){
         timeInterval = setInterval(function(){
             if( timer == 0 ) {
                 checkAnswer();
                 position++;
                 showQuestion();
-                timer = 10;
+                timer = 20;
             } else {
                 timer--;
             }
-           $("#timer").text(timer);
+           $("#timer").text("0:" + timer);
 
         },1000)
     }
